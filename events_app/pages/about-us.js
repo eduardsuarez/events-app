@@ -10,8 +10,8 @@ const AboutUsPage = () => {
       cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
       est laborum
     </div>
-    { console.log('Hola') }
-  );
-};
 
-export default AboutUsPage;
+  )
+}
+
+export default AboutUsPage
