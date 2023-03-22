@@ -1,8 +1,8 @@
 import Head from 'next/head'
 
 import styles from '../styles/Home.module.css'
-import Image from 'next/image'
-import Link from 'next/link'
+
+import { HomePage } from '../src/components/home/home-page'
 
 export default function Home ({ data }) {
   return (
@@ -14,32 +14,8 @@ export default function Home ({ data }) {
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <header>
-        <nav>
-          <Link href='/' passHref> Home</Link>
-          <Link href='/events' passHref>Events</Link>
-          <Link href='/about-us' passHref>About Us</Link>
+      <HomePage data={data} />
 
-        </nav>
-      </header>
-
-      <main className={styles.main}>
-
-        {data.map((ev) => (
-          <Link key={ev.id} href={`/events/${ev.id}`} passHref>
-
-            <Image width={300} height={300} alt={ev.title} src={ev.image} />
-            <h2>{ev.title}</h2> <p>{ev.description}</p>
-
-          </Link>
-
-        ))}
-
-      </main>
-
-      <footer className={styles.footer}>
-        <p>2022 Time to Code - A Project with js</p>
-      </footer>
     </div>
   )
 }
