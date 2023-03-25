@@ -1,15 +1,19 @@
-import Image from 'next/image'
 import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 
-const SingleEvent = ({ data }) => {
+const AllEvents = ({ data }) => {
   return (
-    <div>
-      <Image src={data.image} width={500} height={300} alt={data.title} />
-      <h1>{data.title}</h1>
-      <p>{data.description}</p>
-      <input type='email' /><button type='submit'> submit</button>
+    <div className='events_page'>
+      {data?.map((ev) => (
+        <Link key={ev.id} href={`/events/${ev.id}`} passHref>
+          <a className='card'>
+            <Image src={ev.image} alt={ev.title} width={500} height={500} /> <h2>{ev.title} </h2>
+          </a>
+        </Link>
+      ))}
     </div>
   )
 }
 
-export default SingleEvent
+export default AllEvents
