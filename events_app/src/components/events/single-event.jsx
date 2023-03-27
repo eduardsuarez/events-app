@@ -33,13 +33,13 @@ const SingleEvent = ({ data }) => {
       setMessage(data.message)
       inputEmail.current.value = ''
     } catch (e) {
-      console.log('Error', e)
+      console.log('ERROR', e)
     }
   }
   return (
     <div className='event_single_page'>
-      <Image src={data.image} width={500} height={300} alt={data.title} />
       <h1>{data.title}</h1>
+      <Image src={data.image} width={400} height={400} alt={data.title} />
       <p>{data.description}</p>
       <form onSubmit={onSubmit} className='email_registration'>
 
@@ -47,7 +47,7 @@ const SingleEvent = ({ data }) => {
         <input ref={inputEmail} type='email' id='email' placeholder='Please insert your email here' />
         <button type='submit'> submit</button>
       </form>
-      {message}
+      <p>{message}</p>
     </div>
   )
 }

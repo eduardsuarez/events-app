@@ -1,5 +1,5 @@
 
-import SingleEvent from '../../../src/components/events/events-page'
+import SingleEvent from '../../../src/components/events/single-event'
 
 const EventPage = ({ data }) => <SingleEvent data={data} />
 

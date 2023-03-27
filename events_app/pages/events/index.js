@@ -1,4 +1,5 @@
-import AllEvents from './events-page'
+
+import AllEvents from '../../src/components/events/events-page'
 
 const EventsPage = ({ data }) => {
   return <AllEvents data={data} />
@@ -10,6 +11,7 @@ export async function getStaticProps () {
   const { eventsCategories } = await import('../../data/data.json')
   return {
     props: {
+
       data: eventsCategories
 
     }
