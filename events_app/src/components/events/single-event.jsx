@@ -39,7 +39,7 @@ const SingleEvent = ({ data }) => {
   return (
     <div className='event_single_page'>
       <h1>{data.title}</h1>
-      <Image src={data.image} width={400} height={400} alt={data.title} />
+      <Image src={data.image} width={350} height={300} alt={data.title} />
       <p>{data.description}</p>
       <form onSubmit={onSubmit} className='email_registration'>
 
