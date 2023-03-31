@@ -22,7 +22,7 @@ export const Header = () => {
           </nav>
 
         </div>
-        <p className='title'>Cualquier cosa</p>
+        <p className='title'>City to City Events</p>
       </div>
     </header>
   )
